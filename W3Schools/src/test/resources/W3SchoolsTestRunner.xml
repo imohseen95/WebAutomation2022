@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="W3Schools Test Automation Script" parallel="false">
+    <test name = "W3Schools Home">
+        <parameter name="url" value="https://www.w3schools.com/sql/sql_where.asp"/>
+        <classes>
+
+
+            <class name="TestTable.TestReadData"/>
+
+        </classes>
+    </test>
+</suite>

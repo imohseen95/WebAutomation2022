@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name ="Amazon Test Automation Script" parallel="false">
+    <test name = "Amazon Home">
+
+        <parameter name="useCloudEnv" value="false"/>
+        <parameter name="envName" value="browserstack"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Sierra"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="80.0"/>
+        <parameter name="url" value="https://www.amazon.com/"/>
+        <classes>
+            <!--            <class name="home.TestPageTitle"/>-->
+<!--
+            <class name="home.TestSearch"/>
+-->
+            <class name="home.TestDropDownMenu"/>
+        </classes>
+
+    </test>
+
+</suite>
+
+
+

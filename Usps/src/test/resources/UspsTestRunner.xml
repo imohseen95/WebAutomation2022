@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name ="Usps Test Automation Script" parallel="false">
+    <test name = "Usps Home">
+
+        <parameter name="useCloudEnv" value="false"/>
+        <parameter name="envName" value="browserstack"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Sierra"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="80.0"/>
+        <parameter name="url" value="https://www.usps.com//"/>
+        <classes>
+
+<!--
+            <class name="UspsTest.TestHomePage"/>
+-->
+
+<!--
+            <class name="UspsTest.TestTrackPackagesSearchBar"/>
+-->
+            <class name="UspsTest.TestShop"/>
+        </classes>
+
+    </test>
+
+</suite>
+
+
+

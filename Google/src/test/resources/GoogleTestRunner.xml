@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name ="Google Test Automation Script" parallel="false">
+    <test name = "Google Home">
+
+        <parameter name="useCloudEnv" value="false"/>
+        <parameter name="envName" value="browserstack"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Sierra"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="80.0"/>
+        <parameter name="url" value="https://www.google.com/"/>
+        <classes>
+
+            <!--<class name="Ghome.TestGoogleTitle"/>-->
+            <class name="Ghome.TestGoogleSearch"/>
+<!--
+            <class name="Ghome.TestSignIn"/>
+-->
+                <!--<class name="Ghome.TestGoogleSettingList"/>-->
+        </classes>
+
+    </test>
+
+</suite>
+
+
+
