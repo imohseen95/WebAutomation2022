@@ -126,7 +126,7 @@ public class CommonAPI {
         return driver;
     }
 
-
+    //executes at the last 
     @AfterMethod
     public void cleanUP() {
         driver.close();
