@@ -3,9 +3,9 @@ package datasupply;
 import base.CommonAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import reporting.TestLogger;
 
 import java.util.List;
-
 public class SearchItems extends CommonAPI {
     /*public void itemsSearch() throws InterruptedException {
         List <String> products = SupplyData.getTestData();
@@ -19,8 +19,9 @@ public class SearchItems extends CommonAPI {
     }
 }*/
     public void itemsSearch() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         SupplyData supplyData = new SupplyData();
-        List <String> products = supplyData.getItemListFromDB();
+        List<String> products = supplyData.getItemListFromDB();
         for(String product:products){
             typeOnSearchBox("twotabsearchtextbox", product);
             Thread.sleep(1000);
