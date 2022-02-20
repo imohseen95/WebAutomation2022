@@ -10,13 +10,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <!--<module>Amazon</module>-->
+        <module>Amazon</module>
         <module>Generic</module>
-       <!-- <module>NYP</module>
+        <module>NYP</module>
         <module>W3Schools</module>
-        <module>Google</module>-->
+        <module>Google</module>
         <module>Facebook</module>
-        <!--<module>Usps</module>-->
+        <module>Usps</module>
     </modules>
 
     <dependencyManagement>
