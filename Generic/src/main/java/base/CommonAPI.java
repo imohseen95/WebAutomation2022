@@ -40,12 +40,12 @@ import java.util.concurrent.TimeUnit;
 public class CommonAPI {
     //Extent Report
     public static ExtentReports extent;
-    @BeforeSuite
+   // @BeforeSuite
     public void extentSetup(ITestContext context) {
         ExtentManager.setOutputDirectory(context);
         extent = ExtentManager.getInstance();
     }
-    @BeforeMethod
+   // @BeforeMethod
     public void startExtent(Method method) {
         String className = method.getDeclaringClass().getSimpleName();
         String methodName = method.getName().toLowerCase();
@@ -58,7 +58,7 @@ public class CommonAPI {
         t.printStackTrace(pw);
         return sw.toString();
     }
-    @AfterMethod
+   // @AfterMethod
     public void afterEachTestMethod(ITestResult result) {
         ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
         ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));
@@ -81,7 +81,7 @@ public class CommonAPI {
         }
         driver.quit();
     }
-    @AfterSuite
+   // @AfterSuite
     public void generateReport() {
         extent.close();
     }
