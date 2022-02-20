@@ -19,7 +19,7 @@ public class SearchItems extends CommonAPI {
     }
 }*/
     public void itemsSearch() throws Exception {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+       // TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         SupplyData supplyData = new SupplyData();
         List<String> products = supplyData.getItemListFromDB();
         for(String product:products){

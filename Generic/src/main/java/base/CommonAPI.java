@@ -378,11 +378,12 @@ public class CommonAPI {
             ;
         }
     }
-    public static String convertToString(String st) {
+
+    /*public static String convertToString(String st) {
         String splitString = "";
         splitString = StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(st), ' ');
         return splitString;
-   }
+   }*/
 }
 
 

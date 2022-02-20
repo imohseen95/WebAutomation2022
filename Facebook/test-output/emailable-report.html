@@ -25,20 +25,90 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Facebook</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">95.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Facebook</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">87.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">Facebook &#8212; passed</th></tr>
-<tr class="passedodd"><td>FB.TestMessenger</td><td><a href="#m1"><b>goToMessenger</b>  </a></td><td class="numi">1</td><td>1645288718327</td><td class="numi">16701</td></tr>
-<tr class="passedeven"><td>FB.TestSignUP</td><td><a href="#m2"><b>signingUp</b>  </a></td><td class="numi">1</td><td>1645288684102</td><td class="numi">30139</td></tr>
-<tr class="passedodd"><td>FB.TestFBLanguage</td><td><a href="#m3"><b>languageSelect</b>  </a></td><td class="numi">1</td><td>1645288653230</td><td class="numi">25150</td></tr>
+<tr id="t1"><th colspan="5">Facebook &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td>FB.TestMessenger</td><td><a href="#m1"><b>cleanUP</b>  </a></td><td class="numi">1</td><td>1645327081278</td><td class="numi">2</td></tr>
+<tr class="failedeven"><td>FB.TestSignUP</td><td><a href="#m2"><b>cleanUP</b>  </a></td><td class="numi">1</td><td>1645327060899</td><td class="numi">2</td></tr>
+<tr class="failedodd"><td>FB.TestFBLanguage</td><td><a href="#m3"><b>cleanUP</b>  </a></td><td class="numi">1</td><td>1645327026859</td><td class="numi">13</td></tr>
+<tr><th colspan="5">Facebook &#8212; passed</th></tr>
+<tr class="passedodd"><td>FB.TestFBLanguage</td><td><a href="#m4"><b>languageSelect</b>  </a></td><td class="numi">1</td><td>1645327001426</td><td class="numi">24744</td></tr>
+<tr class="passedeven"><td>FB.TestMessenger</td><td><a href="#m5"><b>testGoToMessenger</b>  </a></td><td class="numi">1</td><td>1645327064516</td><td class="numi">16603</td></tr>
+<tr class="passedodd"><td>FB.TestSignUP</td><td><a href="#m6"><b>signingUp</b>  </a></td><td class="numi">1</td><td>1645327030719</td><td class="numi">29977</td></tr>
 </table>
 <h1>Facebook</h1>
-<h2 id="m1">FB.TestMessenger:goToMessenger</h2>
+<h2 id="m1">FB.TestMessenger:cleanUP</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;MacBook-Air&apos;, ip: &apos;fe80:0:0:0:cf6:20d6:5d63:ffeb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_301&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/gt/ckl3y6b10fl...}, goog:chromeOptions: {debuggerAddress: localhost:54758}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54758/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:428)
+	at base.CommonAPI.cleanUP(CommonAPI.java:199)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">FB.TestSignUP:signingUp</h2>
+<h2 id="m2">FB.TestSignUP:cleanUP</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;MacBook-Air&apos;, ip: &apos;fe80:0:0:0:cf6:20d6:5d63:ffeb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_301&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/gt/ckl3y6b10fl...}, goog:chromeOptions: {debuggerAddress: localhost:54732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54732/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:428)
+	at base.CommonAPI.cleanUP(CommonAPI.java:199)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">FB.TestFBLanguage:languageSelect</h2>
+<h2 id="m3">FB.TestFBLanguage:cleanUP</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;MacBook-Air&apos;, ip: &apos;fe80:0:0:0:cf6:20d6:5d63:ffeb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_301&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/gt/ckl3y6b10fl...}, goog:chromeOptions: {debuggerAddress: localhost:54708}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54708/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:428)
+	at base.CommonAPI.cleanUP(CommonAPI.java:199)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">FB.TestFBLanguage:languageSelect</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">FB.TestMessenger:testGoToMessenger</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">FB.TestSignUP:signingUp</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
